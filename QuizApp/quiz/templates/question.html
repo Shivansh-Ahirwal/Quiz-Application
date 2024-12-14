@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Question</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Quiz Question</h1>
+    <div id="question">
+        <h2>{{ question.text }}</h2>
+    </div>
+    <form method="post" action="{% url 'submit_answer' %}">
+        {% csrf_token %}
+        <input type="hidden" name="question_id" value="{{ question.id }}">
+        <div>
+            <label>
+                <input type="radio" name="selected_option" value="{{ question.option_a }}" required> {{ question.option_a }}
+            </label>
+            <label>
+                <input type="radio" name="selected_option" value="{{ question.option_b }}" required> {{ question.option_b }}
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="selected_option" value="{{ question.option_c }}" required> {{ question.option_c }}
+            </label>
+            <label>
+                <input type="radio" name="selected_option" value="{{ question.option_d }}" required> {{ question.option_d }}
+            </label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>    
+</body>
+</html>
