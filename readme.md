@@ -143,12 +143,6 @@ quiz/static/css/
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
 ## Acknowledgements
 
 - [Django Documentation](https://docs.djangoproject.com/)
@@ -162,4 +156,3 @@ For any questions or suggestions, feel free to contact:
 
 - **Name**: Shivansh Ahirwal
 - **Email**: [[shivanshahirwal@example.com](mailto\:shivanshahirwal@example.com)]
-
