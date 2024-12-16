@@ -1,25 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Results</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/results.css' %}">
 </head>
 <body>
+    <div class="top-bar">
+        <a href="{% url 'home' %}" class="home-btn">Home</a>
+    </div>
     <div class="header">
-        <h1>Quiz Results</h1>
+        <h1>Your Quiz Results</h1>
     </div>
-    <div class="container">
-        <p>Total Questions Answered: </p>
-        <h2>{{ total_questions }}</h2>
-        <p>Correct Answers: </p>
-        <h2>{{ correct_answers }}</h2>
-        <p>Incorrect Answers: </p>
-        <h2>{{ incorrect_answers }}</h2>
-    </div>
-    <div class="exit">
-        <a href="{% url 'next_question' %}">Home
-        </a>
+    <div class="results-container">
+        <div class="results-box">
+            <p>Total Questions Answered:</p>
+            <h2>{{ total_questions }}</h2>
+        </div>
+        <div class="results-box">
+            <p>Correct Answers:</p>
+            <h2 class="correct">{{ correct_answers }}</h2>
+        </div>
+        <div class="results-box">
+            <p>Incorrect Answers:</p>
+            <h2 class="incorrect">{{ incorrect_answers }}</h2>
+        </div>
     </div>
 </body>
 </html>

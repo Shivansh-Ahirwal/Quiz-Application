@@ -13,6 +13,7 @@ class Command(BaseCommand):
             for row in csv_reader:
                 # text, option_a, option_b, option_c, option_d, correct_option = row
                 text = row[0]
+                subject = "Django"
                 option_a = row[1]
                 option_b = row[2]
                 option_c = row[3]
@@ -21,6 +22,7 @@ class Command(BaseCommand):
                 # Create a new Question object for each row in the CSV
                 Question.objects.create(
                     text=text,
+                    subject=subject,
                     option_a=option_a,
                     option_b=option_b,
                     option_c=option_c,
@@ -28,4 +30,4 @@ class Command(BaseCommand):
                     correct_option=correct_option
                 )
                 
-            self.stdout.write(self.style.SUCCESS('Successfully imported quiz questions'))
+            self.stdout.write(self.style.SUCCESS('Successfully imported quiz questions of Django Subject'))

@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    background-color: #45a049;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #45a049;
+}
+
+#header-mid {
+    margin-left: 10px;
+}
+
+#header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-right a {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    transition: background-color 0.3s;
+}
+
+#header-right a:hover {
+    background-color: #45a049;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #45a049;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #45a049;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #4CAF50;
+}
+
+.messages {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
+
+.messages li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Other Links */
+.other-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.register-link {
+    color: #45a049;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+    .login-container {
+        padding: 20px;
+        width: 90%;
+    }
+}

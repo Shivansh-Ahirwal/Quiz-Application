@@ -7,5 +7,9 @@ urlpatterns = [
     path('next/', views.next_question, name='next_question'),  # Fetch next question
     path('submit/', views.submit_answer, name='submit_answer'),  # Submit answer
     path('results/', views.quiz_results, name='quiz_results'),  # Display results
+    path('register/', views.register, name='register'),  # Display results
+    path('login/', views.login_view, name='login'),  # Display results
+    path('profile/', views.profile_view, name='profile'),  # Display results
+    path('logout/', views.logout_view, name='logout'),  # Display results
 ]
     

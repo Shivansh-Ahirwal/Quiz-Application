@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+    <h2>Welcome, {{ user.username }}!</h2>
+    <p>Email: {{ user.email }}</p>
+    <div>
+        <a href="{% url 'logout' %}">Logout</a>|
+        <a href="{% url 'home' %}">Home</a>
+    </div>
+    {% if quiz_history %}
+        <h2>Your Quiz History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Questions Answered</th>
+                    <th>Correct Answers</th>
+                    <th>Incorrect Answers</th>
+                    <th>Score</th>
+                    <th>Date Taken</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for history in quiz_history %}
+                <tr>
+                    <td>{{ history.subject }}</td>
+                    <td>{{ history.total_questions }}</td>
+                    <td>{{ history.correct_answers }}</td>
+                    <td>{{ history.incorrect_answers }}</td>
+                    <td>
+                        {% if history.total_questions > 0 %}
+                            {{ history.percentage|floatformat:2 }}%
+                        {% else %}
+                            N/A
+                        {% endif %}
+                    </td>
+                    <td>{{ history.date_taken }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No quiz history found.</p>
+    {% endif %}
+</body>
+</html>
