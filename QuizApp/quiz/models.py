@@ -21,7 +21,7 @@ class Question(models.Model):
 
 class QuizSession(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    subject = models.CharField(max_length=100)  # Add subject field
+    subject = models.CharField(max_length=100) 
     questions_answered = models.PositiveIntegerField(default=0)
     correct_answers = models.PositiveIntegerField(default=0)
     incorrect_answers = models.PositiveIntegerField(default=0)

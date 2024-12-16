@@ -8,10 +8,9 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         with open(r'C:\Users\91975\Documents\Quize-Project\QuizApp\quiz\utils\countries.csv', 'r') as file:
             csv_reader = csv.reader(file)
-            next(csv_reader)  # Skip the header row
+            next(csv_reader)
 
             for row in csv_reader:
-                # text, option_a, option_b, option_c, option_d, correct_option = row
                 text = row[0]
                 subject = "Countries"
                 option_a = row[1]
@@ -19,7 +18,6 @@ class Command(BaseCommand):
                 option_c = row[3]
                 option_d = row[4]
                 correct_option = row[5]
-                # Create a new Question object for each row in the CSV
                 Question.objects.create(
                     text=text,
                     subject=subject,

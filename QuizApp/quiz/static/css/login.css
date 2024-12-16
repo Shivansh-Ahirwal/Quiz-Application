@@ -128,7 +128,6 @@ input[type="text"], input[type="password"] {
     margin: 5px 0;
 }
 
-/* Other Links */
 .other-links {
     margin-top: 20px;
     text-align: center;
@@ -144,7 +143,6 @@ input[type="text"], input[type="password"] {
     text-decoration: underline;
 }
 
-/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     h2 {
         font-size: 2rem;
