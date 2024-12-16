@@ -14,11 +14,6 @@ A dynamic and interactive web application for quizzes, built with Django, design
 
 ---
 
-## **Demo** 🔗  
-Add screenshots or a GIF to showcase your application.
-
----
-
 ## **Tech Stack** 🛠️  
 - **Backend**: Python, Django  
 - **Frontend**: HTML, CSS, JavaScript  
@@ -45,7 +40,7 @@ Ensure you have the following installed on your system:
 2. Create a virtual environment:  
    ```bash
    python -m venv venv
-   source venv/bin/activate  # For Windows: venv\Scripts\activate
+   venv/Scripts/activate   # For Linux: venv/bin/activate
    ```
 
 3. Install the required dependencies:  
