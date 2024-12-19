@@ -18,6 +18,9 @@ def home(request):
     ]
     return render(request, 'home.html', {'subjects': subjects})
 
+def to_admin(request):
+    return redirect('/admin/')
+
 @login_required(login_url='/login/')
 def start_quiz(request):
     if request.method == 'POST':

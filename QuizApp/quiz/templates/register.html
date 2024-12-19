@@ -1,29 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
 </head>
 <body>
-    <h2>Register</h2>
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+    <div class="container">
+        <h2>Register</h2>
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
 
-        <button type="submit">Register</button>
-    </form>
+            <button type="submit">Register</button>
+        </form>
+
+        <div class="footer-links">
+            <p>Already registered? <a href="{% url 'login' %}">Login</a></p>
+            <p>Go back to <a href="{% url 'home' %}">Home</a></p>
+        </div>
+    </div>
 </body>
 </html>
