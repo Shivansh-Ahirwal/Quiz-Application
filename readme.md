@@ -33,8 +33,8 @@ Ensure you have the following installed on your system:
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-repo/awesome-quiz.git
-   cd awesome-quiz
+   git clone https://github.com/Shivansh-Ahirwal/Quiz-Application.git
+   cd QuizApp
    ```
 
 2. Create a virtual environment:  
@@ -48,22 +48,27 @@ Ensure you have the following installed on your system:
    pip install -r requirements.txt
    ```
 
-4. Apply database migrations:  
+4. Create database migrations:  
+   ```bash
+   python manage.py makemigrations
+   ```
+
+5. Apply database migrations:  
    ```bash
    python manage.py migrate
    ```
 
-5. Create a superuser to access the admin panel:  
+6. Create a superuser to access the admin panel:  
    ```bash
    python manage.py createsuperuser
    ```
 
-6. Run the development server:  
+7. Run the development server:  
    ```bash
    python manage.py runserver
    ```
 
-7. Open the application in your browser:  
+8. Open the application in your browser:  
    ```
    http://127.0.0.1:8000/
    ```
